@@ -1,7 +1,7 @@
 import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:highlight_text/src/HighlightedWord.dart';
+import 'package:flutter_text_highlight/src/HighlightedWord.dart';
 
 class TextHighlight extends StatelessWidget {
   final String text;
@@ -36,7 +36,7 @@ class TextHighlight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> _textWords = List();
-    _textWords = text.split(" ");
+    _textWords = text.split(" ").where((word) => word.isNotEmpty);
     return RichText(
       text: buildSpan(_textWords),
       locale: locale,
