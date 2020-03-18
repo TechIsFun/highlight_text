@@ -36,7 +36,7 @@ class TextHighlight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> _textWords = List();
-    _textWords = text.split(" ").where((word) => word.isNotEmpty);
+    _textWords = text.split(" ").where((word) => word.isNotEmpty).toList();
     return RichText(
       text: buildSpan(_textWords),
       locale: locale,

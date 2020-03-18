@@ -1,3 +1,6 @@
+
+[![pub](https://img.shields.io/pub/v/flutter_highlight_text)](https://pub.dev/packages/flutter_highlight_text)
+
 # Highlight Text Plugin
 
 A flutter package to highlight words from a text.
