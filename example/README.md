@@ -1,10 +1,10 @@
 ## Example
 
-You can see the complete example in the [GitHub Repository](https://github.com/desconexo/highlight_text/tree/master/example).
+You can see the complete example in the [GitHub Repository](https://github.com/desconexo/flutter_text_highlight/tree/master/example).
 
 Import the highlight library
 ``` dart
-import 'package:highlight_text/highlight_text.dart';
+import 'package:flutter_text_highlight/flutter_text_highlight.dart';
 ```
 
 You should use the `HighlightedWord` class to specify the dictionary words in a Map object

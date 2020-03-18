@@ -1,5 +1,6 @@
 import 'dart:collection';
-import 'package:highlight_text/src/HighlightedWord.dart';
+
+import '../flutter_text_highlight.dart';
 
 class HighlightMap {
   LinkedHashMap<String, HighlightedWord> _hashMap = LinkedHashMap(

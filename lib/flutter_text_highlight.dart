@@ -1,4 +1,4 @@
-library highlight_text;
+library flutter_text_highlight;
 
 import 'package:flutter/services.dart';
 
@@ -7,7 +7,8 @@ export 'src/TextHighlight.dart';
 export 'src/HighlightMap.dart';
 
 class HighlightText {
-  static const MethodChannel _channel = const MethodChannel('highlight_text');
+  static const MethodChannel _channel =
+      const MethodChannel('flutter_text_highlight');
 
   static Future<String> get platformVersion async {
     final String version = await _channel.invokeMethod('getPlatformVersion');

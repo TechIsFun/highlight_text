@@ -1,3 +1,6 @@
+### 0.8.0
+Fixed `RangeError (index): Invalid value: Valid value range is empty: -1` exception with empty text.
+
 ## 0.7.2
 Health suggestions.
 
