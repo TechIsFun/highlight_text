@@ -35,8 +35,22 @@ class TextHighlight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String textWithCustomSeparator = text;
+    for (String word in words.keys) {
+      RegExp pattern = RegExp(word, caseSensitive: false);
+      textWithCustomSeparator =
+          textWithCustomSeparator.replaceAllMapped(pattern, (match) {
+        return "|" + match.group(0) + "|";
+      });
+    }
+    print("Text with custom separator: $textWithCustomSeparator");
+
     List<String> _textWords = List();
-    _textWords = text.split(" ").where((word) => word.isNotEmpty).toList();
+    _textWords = textWithCustomSeparator
+        .split("|")
+        .where((word) => word.isNotEmpty)
+        .toList();
+
     return RichText(
       text: buildSpan(_textWords),
       locale: locale,
@@ -73,7 +87,7 @@ class TextHighlight extends StatelessWidget {
         );
       } else {
         return TextSpan(
-          text: currentWord + " ",
+          text: currentWord,
           style: this.words.containsKey(currentWord)
               ? this.words[currentWord].textStyle
               : textStyle,

@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     TextStyle textStyle = TextStyle(
-      color: Colors.red,
-      fontSize: 26.0,
-    );
+        color: Colors.red,
+        fontSize: 20.0,
+        decoration: TextDecoration.underline);
     Map<String, HighlightedWord> words = {
       "flutter": HighlightedWord(
         onTap: () {
@@ -57,6 +57,27 @@ class _HomePageState extends State<HomePage> {
                   title: Text("open-source"),
                   content: Text(
                       "Open-source software (OSS) is a type of computer software in which source code is released under a license in which the copyright holder grants users the rights to study, change, and distribute the software to anyone and for any purpose."),
+                  actions: <Widget>[
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text("Ok"),
+                    )
+                  ],
+                );
+              });
+        },
+        textStyle: textStyle,
+      ),
+      "mobile application": HighlightedWord(
+        onTap: () {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: Text("mobile application"),
+                  content: Text("mobile application bla bla bla"),
                   actions: <Widget>[
                     FlatButton(
                       onPressed: () {
@@ -114,7 +135,7 @@ class _HomePageState extends State<HomePage> {
         },
         textStyle: textStyle,
       ),
-      "Fuchsia": HighlightedWord(
+      "Google Fuchsia": HighlightedWord(
         onTap: () {
           showDialog(
               context: context,
@@ -136,7 +157,7 @@ class _HomePageState extends State<HomePage> {
         },
         textStyle: textStyle,
       ),
-      "Google": HighlightedWord(
+      /*"Google": HighlightedWord(
         onTap: () {
           showDialog(
               context: context,
@@ -157,7 +178,7 @@ class _HomePageState extends State<HomePage> {
               });
         },
         textStyle: textStyle,
-      ),
+      ),*/
     };
     HighlightMap highlightMap = HighlightMap(words);
     return Scaffold(
@@ -176,9 +197,9 @@ class _HomePageState extends State<HomePage> {
                 text: text,
                 words: highlightMap.getMap,
                 textStyle: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.black,
-                ),
+                    fontSize: 20.0,
+                    color: Colors.black,
+                    decoration: TextDecoration.none),
                 textAlign: TextAlign.justify,
               ),
             ],
