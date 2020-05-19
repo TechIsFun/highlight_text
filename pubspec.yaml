@@ -1,6 +1,6 @@
 name: flutter_text_highlight
 description: Render text with highlighted words. You can add specific styles and actions to each highlighted word. This is based on flutter_text_highlight by Fernando Éricles.
-version: 0.8.1
+version: 0.8.2
 homepage: https://github.com/TechIsFun/flutter_text_highlight
 
 environment:

@@ -1,3 +1,6 @@
+### 0.8.2
+Added support for highlight of multiple words. 
+
 ### 0.8.1
 Fixed `RangeError (index): Invalid value: Valid value range is empty: -1` exception with empty text.
 
